@@ -121,7 +121,66 @@ Thought process: Each customer wants to use a service to focus on their business
 
 #### 8. A customer is creating a site and would like their project not to be indexed by search engines. Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
 
-TODO
+Hey there,
+
+I understand that you do not want your project to be indexed by search engines. [Popular search engines](https://blog.hubspot.com/marketing/top-search-engines) such as Google, Bing and Yandex support the following ways to do the same:
+
+#1 Robots meta tag: Add a `<meta name="robots" content="noindex" />` to each page of your website.
+
+#2 X-Robots-Tag HTTP header: Return each page with an additional header, i.e. `X-Robots-Tag` with the value of `noindex`.
+
+In my view, if you want to not index the entire project, there can be routes in your project that are not HTML and yet being frequently visited. This makes such URLs prone to being picked up by the crawlers.
+
+Hence, my recommendation is to use the #2 way to prevent indexing your website. To do so:
+
+- If you're using Next.js for your project, make the following additions in next.config.(mjs|ts|js) file of your project:
+
+```diff
+// ...
+
+module.exports = {
+  // ...,
++  async headers() {
++     return [
++       {
++         source: '/:path*',
++         headers: [
++           {
++             key: 'X-Robots-Tag',
++             value: 'noindex',
++           },
++         ]
++       },
++     ];
++   },
+}
+```
+
+- If you're not using Next.js, create (or update) a `vercel.json` at the root directory of your project with the following code:
+
+```json
+{
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex",
+        },
+      ]
+    }
+  ]
+}
+```
+
+and deploy the changes to Vercel to see the header being returned with each response.
+
+Hope this helps. Do let us know if anything.
+
+<hr />
+
+Thought process: Though the solution is straight forward, it makes sense to educate the user about the possible cases regarding indexing. This addresses the pain point of the user, including the one that'd be raised in future once they want to index **only** some portions of their project.
 
 #### 9. What do you think is one of the most common problems which customers ask Vercel for help with? How would you help customers to overcome common problems, short-term and long-term?
 
