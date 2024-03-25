@@ -121,6 +121,8 @@ Thought process: Each customer wants to use a service to focus on their business
 
 #### 8. A customer is creating a site and would like their project not to be indexed by search engines. Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
 
+<hr />
+
 Hey there,
 
 I understand that you do not want your project to be indexed by search engines. [Popular search engines](https://blog.hubspot.com/marketing/top-search-engines) such as Google, Bing and Yandex support the following ways to do the same:
