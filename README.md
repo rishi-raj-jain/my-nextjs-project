@@ -57,7 +57,52 @@ TODO
 
 #### 7. A customer writes in to the Helpdesk asking "How do I do a redirect from the /blog path to https://example.com?" Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
 
-TODO
+<hr />
+
+Hey there,
+
+Using [Redirects](https://vercel.com/docs/edge-network/redirects) you can redirect an incoming request to a given URL. The redirects are populated to every deployment region's edge network.
+
+- If you're using Next.js for your project, make the following additions in next.config.(mjs|ts|js) file of your project:
+
+```diff
+// ...
+
+module.exports = {
+  // ...,
++  async redirects() {
++     return [
++       {
++         source: '/blog',
++         destination: 'https://example.com',
++         permanent: true,
++       },
++     ];
++   },
+}
+```
+
+- If you're not using Next.js, create (or update) a `vercel.json` at the root directory of your project with the following code:
+
+```json
+{
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://example.com",
+      "permanent": true
+    }
+  ]
+}
+```
+
+and deploy the changes to Vercel to see the redirection in effect.
+
+Hope this helps. Do let us know if anything.
+
+<hr />
+
+Thought process: Each customer wants to use a service to focus on their business logic. If a customer faces an issue, even though it's tempting to educate them in detail about the platform and it's benefits, the immediate response the support engineer can get out to them is the solution that they need. This addresses the pain point of the user, and then one can proceed to educate and showcase the benefits in further communication. In this case, the customer needed to learn how to redirect, I could have asked them about their stack and wait for some hours before they respond. But the likelihood of it being not addressed by the response I sent above is not worth hours of wait, so I responded to them with an answer that is most likely to address the concern.
 
 #### 8. A customer is creating a site and would like their project not to be indexed by search engines. Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
 
