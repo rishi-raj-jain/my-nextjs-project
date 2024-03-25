@@ -114,4 +114,4 @@ TODO
 
 #### 10. How could we improve or alter this familiarisation exercise?
 
-TODO
+I think the use of Next.js is confusing for this exercise. I am more than happy to spin up a Next.js project, but unless I am developing an application using it, I do not see the immediate use of it in this exercise.
