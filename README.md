@@ -60,7 +60,11 @@ All of the POCs came in handy when addressing each customer (irrespective of the
 
 #### 4. When would you choose to use Edge Functions, Serverless Functions, or Edge Middleware with Vercel?
 
-TODO
+First, we need to understand the difference of the execution layer between each on Vercel:
+
+- Edge Middleware runs before the backend logic (which can be a serverless function or an edge function). Makes it fit to be used to say rate limit or enforce authentication on endpoints of the application without intervening into the backend logic.
+- Edge functions have no cold starts and very low global latency, while Serverless functions have cold starts between [100ms to 1s](https://vercel.com/guides/how-can-i-improve-serverless-function-lambda-cold-start-performance-on-vercel#:~:text=under%20100%20ms%20to%20over%201%20second.) and have a greater global latency. Makes Edge functions a perfect fit for processes that are supposed to fast, such as real-time data processing or edge caching.
+- Serverless functions can run up 60s, have memory size upto 1024 MB and support Node.js, while Edge functions have limitations of 128 MB as the maximum memory size, can run only up to 5s in comparison and do not support Node.js. Makes Serverless functions a perfect fit for processes that require API integrations, and very commonly used  Node.js-first packages.
 
 #### 5. Imagine a customer writes in requesting help with a build issue on a framework or technology that you've not seen before. How would you begin troubleshooting this and what questions would you ask the customer to understand the situation better?
 
