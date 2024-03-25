@@ -41,7 +41,22 @@ I am a fan of Vercel since I attended the first Zeit Hackathon. At Vercel, I aim
 
 #### 3. Describe how you solved a challenge or technical issue that you faced in a previous role (preferably in a previous support role). How did you determine that your solution was successful?
 
-TODO
+Technical Issue: Can Lemon Squeezy be used to host checkouts in a Nuxt application?
+<hr />
+Background & Solution Process:
+
+At the time when the issue was raised, there was no existing POC for Lemon Squeezy in any meta frameworks out there. This pointed to a broader issue of how to use Lemon.js by Lemon Squeezy in any frontend app to host checkouts inside the application itself.
+
+Starting with, Nuxt 3, I created 4 POCs of using Lemon.js with the popular metaframeworks: Nuxt3, Next.js, Astro and SvelteKit: https://github.com/rishi-raj-jain?tab=repositories&q=lemonsqueezy following the best practices:
+
+- Load the products by using Lemon Squeezy APIs (and NOT hardcoding the product links)
+- Lazy loading Lemon.js for non-checkout page(s) whereever possible so that the main thread is not kept busy for critical actions.
+- Used main thread to alter the state of the buy buttons (that load the checkout inside the application) based on the onload event of the script.
+- Define a global independent script for handling the interactions with the buy buttons: https://github.com/rishi-raj-jain/lemonsqueezy-astro-poc/blob/main/src/pages/product/%5Bslug%5D.astro#L39-L59.
+
+To determine that if the technical solution was successful, I used the internal demo account to create a product in Lemon Squeezy dashboard, use the API to load the products and see the in-app checkouts being created as expected.
+
+All of the POCs came in handy when addressing each customer (irrespective of their business size) with doubts over using Lemon.js in their dynamic/static applications.
 
 #### 4. When would you choose to use Edge Functions, Serverless Functions, or Edge Middleware with Vercel?
 
