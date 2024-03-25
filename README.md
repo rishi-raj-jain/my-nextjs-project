@@ -14,7 +14,21 @@ documentation and templates for help and inspiration.
 
 #### 1. From [this list](https://gist.github.com/Pieparker/b04a4e9ff82ba949e5db9d5b0e9d89e8), rank your 5 most favourite and 5 least favourite support tasks. Provide a brief explanation for each.
 
-TODO
+Even though I accept the work as is (regardless of the task category) and discuss the priorities with my manager, here are my top 5 **most favourite** tasks from the given list:
+
+- Write and maintain support articles and docs pages: I have written over [50 technical articles](https://rishi.app/blogs/#:~:text=READ%20MORE%20%E2%86%92-,Media%20Posts,-Using%20Astro%20and) that have been published by Xata, Upstash, Storyblok, HarperDB, Koyeb, etc. I enjoy technical writing because it educates, allows the readers to save time and learn from the existing set of approaches. With support articles and docs pages, the ideal/expected use of the technology in a given use case is communicated clearly. In addition, edge cases are specifically highlighted to inform the users of the features/tradeoffs.
+- Create video tutorials to help teach users a specific feature or use case: I truly believe in documenting solutions, videos being one of the mediums. The process of learning/implementing a use case by a customer/enthusiast becomes easier as they're being visually guided by the video tutorials throughout. Here are the [videos](https://rishi.app/videos/) that I have created in the past revolving around web developement.
+- Identify, file (and, where possible, resolve) bugs in private and public Vercel/Next.js repos on GitHub: The best way to learn is by doing. I have (in my earlier roles) dug into unknown big projects and identified the gaps where the customer/enthusiast can improve in their production ready code/POCs to make the best use of the technology. This allows to identify if any gaps in the documentation that needs to be covered, and improves my technical knowledge/expertise in doing so.
+- Work with the product team to develop a new feature based on feedback from customers: Customer are the core of business. Being at front of the line, it'd help me gather feedback from the customers and propose a new feature/idea/project to address the commonly raised issues/requests. Further, using the feedback loop, the team can re-iterate to address the needs of the customer better, and have a better chance of converting the enthusiasts to customers.
+- Respond to queries on Twitter, Reddit, Hacker News and other 3rd party sites: While emails are great, people often take to social media (including myself in the past) to raise technical issues, say out of frusturation. In addition to that, the social media presence of `rauchg` is a demonstration of how even CEOs are fielding customer/enthusiast's questions during weekends and ONLY sticking to the subject of matter. This creates a positive effect for the observers and resolves the issue(s).
+
+Alright, let's get to the 4 **least favourite** tasks (though I'd like to highlight that work is work and there are no two ways about it):
+
+- Help resolve billing issues for customers: I've been a Support Engineer at Lemon Squeezy, and there were huge inbound of payment related tickets and I am aware that billing is the most concerned parts for any customer.  I'm more than happy to run the playbooks and/or escalate the issue via process to the Billing team so that the team can focus on their areas of expertise.
+- Manage a support team: I'd like to gain more experience in handling customer issues first.
+- Find and recruit teammates for the support team: Even though I'm more than happy to do interviews for teammates, this is something that I'd address this after the customer's needs.
+- Analyze hundreds of support tickets to spot trends the product team can use: While this is something that can be done in parallel to addressing the support tickets, by let's say using categories to mark a support ticket and reference them later, I'd address this after the customer's needs.
+- I couldn't find the 5th as all other choices seemed of my immediate interests and definitely NOT fall in least favourite zone.
 
 #### 2. What do you want to learn or do more of at work?
 
