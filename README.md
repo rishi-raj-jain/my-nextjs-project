@@ -32,7 +32,12 @@ Alright, let's get to the 4 **least favourite** tasks (though I'd like to highli
 
 #### 2. What do you want to learn or do more of at work?
 
-TODO
+I am a fan of Vercel since I attended the first Zeit Hackathon. At Vercel, I aim to learn and do more of the following:
+
+- Be at the front of the line to respond **quickly** to customer/ethusiast issue(s).
+- Be **highly** involved in addressing technical difficulties faced with the platform.
+- **Bridge** the gap between developer and Vercel by contributing to SDKs and Docs/Videos.
+- Learn about and improve the knowledge of **numerous** production-ready architecture possible with Vercel.
 
 #### 3. Describe how you solved a challenge or technical issue that you faced in a previous role (preferably in a previous support role). How did you determine that your solution was successful?
 
