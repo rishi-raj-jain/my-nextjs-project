@@ -64,11 +64,30 @@ TODO
 
 #### 5. Imagine a customer writes in requesting help with a build issue on a framework or technology that you've not seen before. How would you begin troubleshooting this and what questions would you ask the customer to understand the situation better?
 
-TODO
+I've contributed to Astro in terms of triaging issues and creating quick fixes via PRs. All of the issues require a minimal and reproducible example to specifically illustrate the issue.
+
+Following such an approach, allows to focus on the steps to create the error in the particular framework, even if it's unknown to me. I'd go ahead and ask the customer the following in a single email:
+
+- What's the error that you're facing? Feel free to be as detailed and attach screenshots wherever possible.
+- May you share a reproducible example of the error that you're seeing? My github username is `rishi-raj-jain`.
+
+In case the minimal reproducible example is not available, I'd go ahead and ask the following in another email:
+
+- Can you describe what you're trying to develop with the framework? Asking this so that I can give it a go from creating a particular thing from scratch.
+
+Now, depending on the user's response, I'd take it further. Most likely, it'd be based on the specific integration/feature/demand they're after.
 
 #### 6. Please write a follow-up reply to the customer.
 
-TODO
+<hr />
+
+Hey there,
+
+I understand that you're frustrated with the issue. As I check from your Vercel deployment, the issue occurs during the build phase of your application. The questions are helpful in scoping what exactly are you trying to build with the particular framework, and how we can help you do the same succesfully for smoother builds in the future. Would you be able to share a minimal reproduction repository with me of the error you're facing or share the commit/code that'd help me dig into it further?
+
+<hr />
+
+Thought process: As we already know that it's a build step error, if not clearly visible from the error itself, the likelihood of it being a platform error is low. Hence, the best way to address a frustrated customer is to be transparent with what the support engineer is thinking and involve them in the process itself. This allows the customer to speak their mind.
 
 #### 7. A customer writes in to the Helpdesk asking "How do I do a redirect from the /blog path to https://example.com?" Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
 
@@ -186,7 +205,13 @@ Thought process: Though the solution is straight forward, it makes sense to educ
 
 #### 9. What do you think is one of the most common problems which customers ask Vercel for help with? How would you help customers to overcome common problems, short-term and long-term?
 
-TODO
+On Twitter, I do see people express concern over the unexpected bills that they receive. Recently, the spending limit feature had recieved a lot of feedback from the community, expecting an input that'd limit the resources to bill less than or equal to that amount per cycle. Some solutions as below:
+
+- Introducing a hard spend limit: Instead of figuring spend limits through webhooks, we introduce a system that allows the users to set the maximum amount the equivalent resources shall take. This is going to be time taking because it requires a deep integration throughout the platform, but once in place solves the user concerns, and hence a good long term solution.
+
+- Communicating Bill-able Usage: Users need to know what are they being billed for. So we go ahead and make sure that we show the usage of the bill-able components of the platform. While this might take time to get done, but once it's in place, it solves the user concerns, and hence another good long term solution.
+
+- Internal billing tool: As long term solutions would take up time, the team can spin up less amount of resources to create an internal tool that goes a step further to break into how billing is done. It does not need to be detailed into each and every component per se, but give the overall analysis including a table of the billable components. As this solution is not end-to-end transparent/communicative, it's fit for a short term solution which can be used to communicate with the users on the email to assure them of billing and discuss gaps if any.
 
 #### 10. How could we improve or alter this familiarisation exercise?
 
